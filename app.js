@@ -1,4 +1,5 @@
 const express = require('express');
+const volleyball = require('volleyball');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const twitterApp = express();
@@ -16,7 +17,7 @@ twitterApp.use(bodyParser.json());
 //     res.end(JSON.stringify(req.body, null, 2));
 // });
 
-twitterApp.use(morgan('default'));
+twitterApp.use(volleyball);
 
 twitterApp.get('/', (req, res) => res.send('Hey!'));
 
